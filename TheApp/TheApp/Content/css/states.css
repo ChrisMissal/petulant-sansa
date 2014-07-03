@@ -1,5 +1,4 @@
-﻿#wizard div { display: none; }
-
+﻿
 #wizard.complete #intro {
     display: none;
 }
@@ -10,7 +9,7 @@
     display: block;
 }
 #wizard.enter-name #intro {
-    display: block;
+    display: none;
 }
 
 

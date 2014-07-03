@@ -19,7 +19,10 @@ namespace TheApp
                         "~/Scripts/angular-ui/ui-bootstrap.js"
                         ));
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                        "~/Content/app/app.js"));
+                        "~/Content/app/app.js",
+                        "~/Content/app/controllers.js",
+                        "~/Content/app/directives.js"
+                        ));
         }
     }
 }

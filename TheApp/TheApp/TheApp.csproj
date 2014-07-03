@@ -147,6 +147,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\app\app.js" />
+    <Content Include="Content\app\controllers.js" />
+    <Content Include="Content\app\directives.js" />
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\states.css" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -156,6 +158,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\partials\wizard-controls.html" />
+    <Content Include="Content\partials\wizard-enter-address.html" />
+    <Content Include="Content\partials\wizard-enter-name.html" />
+    <Content Include="Content\partials\wizard-complete.html" />
+    <Content Include="Content\partials\wizard-intro.html" />
+    <Content Include="Content\partials\wizard.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="main.css" />
@@ -487,18 +495,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\errors.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\Wizard\Complete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\Wizard\EnterName.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\Wizard\Intro.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\Wizard\EnterAddress.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
