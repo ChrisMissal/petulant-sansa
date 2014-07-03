@@ -9,7 +9,9 @@ namespace TheApp
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/bundles/base").Include(
-                        "~/Content/css/base.css"));
+                        "~/Content/css/base.css",
+                        "~/Content/css/states.css"
+                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                         "~/Scripts/angular.js",

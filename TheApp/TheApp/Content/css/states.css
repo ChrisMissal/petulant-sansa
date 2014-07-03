@@ -1,0 +1,55 @@
+﻿#wizard div { display: none; }
+
+#wizard.complete #intro {
+    display: none;
+}
+#wizard.enter-address #intro {
+    display: none;
+}
+#wizard.intro #intro {
+    display: block;
+}
+#wizard.enter-name #intro {
+    display: block;
+}
+
+
+#wizard.complete #enter-name {
+    display: none;
+}
+#wizard.enter-address #enter-name {
+    display: none;
+}
+#wizard.intro #enter-name {
+    display: none;
+}
+#wizard.enter-name #enter-name {
+    display: block;
+}
+
+#wizard.complete #complete {
+    display: block;
+}
+#wizard.enter-address #complete  {
+    display: none;
+}
+#wizard.intro #complete {
+    display: none;
+}
+#wizard.enter-name #complete {
+    display: none;
+}
+
+#wizard.complete #enter-address {
+    display: none;
+}
+#wizard.enter-address #enter-address {
+    display: block;
+}
+#wizard.intro #enter-address {
+    display: none;
+}
+#wizard.enter-name #enter-address {
+    display: none;
+}
+

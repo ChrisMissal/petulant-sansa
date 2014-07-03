@@ -148,6 +148,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\app\app.js" />
     <Content Include="Content\css\base.css" />
+    <Content Include="Content\css\states.css" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -486,6 +487,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\errors.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Wizard\Complete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Wizard\EnterName.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Wizard\Intro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Wizard\EnterAddress.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
