@@ -13,8 +13,11 @@ namespace TheApp
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                         "~/Scripts/angular.js",
-                        "~/Scripts/angular-*"
+                        "~/Scripts/angular-*",
+                        "~/Scripts/angular-ui/ui-bootstrap.js"
                         ));
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/Content/app/app.js"));
         }
     }
 }
