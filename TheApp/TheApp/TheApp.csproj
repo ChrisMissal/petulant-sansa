@@ -148,6 +148,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\app\app.js" />
     <Content Include="Content\app\controllers.js" />
+    <Content Include="Content\app\services.js" />
     <Content Include="Content\app\directives.js" />
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\states.css" />
