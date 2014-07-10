@@ -1,5 +1,6 @@
 ﻿namespace TheApp.Controllers
 {
+    using System;
     using System.Linq;
     using Headspring;
 
@@ -25,6 +26,14 @@
         public State Previous
         {
             get { return GetAll().FirstOrDefault(x => x.Order == Order - 1); }
+        }
+
+        public decimal Progress
+        {
+            get
+            {
+                return Math.Round((Order - 1m)/(GetAll().Length - 1m), 2)*100m;
+            }
         }
     }
 }

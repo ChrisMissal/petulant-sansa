@@ -1,14 +1,20 @@
-<div id="wizard" class="{{ state }}">
+<div id="wizard" class="{{ state }} row">
     <header>
         <div class="panel-title">{{ title }}</div>
         <div class="errors"></div>
     </header>
-    <wizard-intro></wizard-intro>
-    <wizard-enter-name></wizard-enter-name>
-    <wizard-enter-address></wizard-enter-address>
-    <wizard-complete></wizard-complete>
+    <div class="form-control-static">
+        <wizard-intro></wizard-intro>
+        <wizard-enter-name></wizard-enter-name>
+        <wizard-enter-address></wizard-enter-address>
+        <wizard-complete></wizard-complete>
+    </div>
     <footer>
-        <wizard-controls></wizard-controls>
-        <div class="progress"></div>
+        <div class="row">
+            <wizard-controls></wizard-controls>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info" ng-style="progressStyle"></div>
+            </div>
+        </div>
     </footer>
 </div>
