@@ -1,10 +1,16 @@
 ﻿
-angular.module('TheApp').controller('WizardCtrl', ['$scope', 'Presenter', function ($scope, Presenter) {
+angular.module('TheApp').controller('WizardCtrl', ['$scope', 'Presenter', 'Cart', function ($scope, Presenter, Cart) {
 
-    Presenter.update({ state: 'intro' }, $scope);
+    var cartId = ($scope.cart && $scope.cart.id) || 'none';
+
+    Cart.get({ id: cartId }, function (cart) {
+        Presenter.update($scope, cart);
+    });
 
     $scope.next = function() {
-        console.log('next');
+        Cart.update($scope.cart, function(cart) {
+            Presenter.update($scope, cart);
+        });
     }
     $scope.back = function() {
         console.log('back');

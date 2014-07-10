@@ -148,14 +148,20 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\app\app.js" />
     <Content Include="Content\app\controllers.js" />
+    <Content Include="Content\app\resources.js" />
     <Content Include="Content\app\services.js" />
     <Content Include="Content\app\directives.js" />
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\states.css" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CartProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\State.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Headspring\Enumeration.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +173,7 @@
     <Content Include="Content\partials\wizard.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Headspring\LICENSE.txt" />
     <Content Include="main.css" />
     <Content Include="normalize.css" />
     <Content Include="Scripts\angular-animate.js" />
@@ -486,7 +493,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
