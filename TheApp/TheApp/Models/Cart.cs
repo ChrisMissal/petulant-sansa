@@ -13,5 +13,7 @@
         public string Id { get; set; }
 
         public State State { get; set; }
+
+        public string Redirect { get; set; }
     }
 }

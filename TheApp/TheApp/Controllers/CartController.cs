@@ -33,5 +33,15 @@
 
             return cart;
         }
+
+        [ActionName("done"), HttpPost]
+        public Cart Done(string id)
+        {
+            var cart = _cartProvider.Get(id);
+
+            cart.Redirect = "/receipt/" + cart.Id;
+
+            return cart;
+        }
     }
 }

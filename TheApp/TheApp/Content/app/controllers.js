@@ -18,6 +18,11 @@ angular.module('TheApp').controller('WizardCtrl', ['$scope', 'Presenter', 'Cart'
         });
     }
     $scope.done = function() {
-        console.log('done');
+        Cart.done($scope.cart, function (cart) {
+            Presenter.update($scope, cart);
+        });
     }
+}]).controller('ReceiptCtrl', ['$scope', '$routeParams', function ($scope, $routeParams) {
+    console.log($routeParams);
+    $scope.cartId = $routeParams.id;
 }]);

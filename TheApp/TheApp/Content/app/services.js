@@ -1,6 +1,9 @@
 ﻿
-angular.module('TheApp').service('Presenter', function() {
-    this.update = function($scope, data) {
+angular.module('TheApp').service('Presenter', ['$location', function($location) {
+    this.update = function ($scope, data) {
+
+        data.redirect && $location.path(data.redirect);
+
         $scope.state = data.state.value;
         $scope.title = data.state.displayName;
 
@@ -12,4 +15,4 @@ angular.module('TheApp').service('Presenter', function() {
 
         $scope.cart = data;
     }
-});
+}]);

@@ -147,6 +147,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\partials\receipt.html" />
     <Content Include="Content\partials\wizard-controls.html" />
     <Content Include="Content\partials\wizard-enter-address.html" />
     <Content Include="Content\partials\wizard-enter-name.html" />
