@@ -1,7 +1,8 @@
 ﻿
 angular.module('TheApp').factory('Cart', ['$resource', function ($resource) {
-    return $resource('/api/cart/:cartId', { cartId: '@id' }, {
+    return $resource('/api/cart/:cartId/:action', { cartId: '@id' }, {
         'get': { method: 'GET' },
-        'update': { method: 'PUT' }
+        'next': { method: 'PUT', params: { action: 'next' } },
+        'back': { method: 'PUT', params: { action: 'back' } }
     });
 }]);

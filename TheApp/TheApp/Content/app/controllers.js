@@ -8,12 +8,14 @@ angular.module('TheApp').controller('WizardCtrl', ['$scope', 'Presenter', 'Cart'
     });
 
     $scope.next = function() {
-        Cart.update($scope.cart, function(cart) {
+        Cart.next($scope.cart, function (cart) {
             Presenter.update($scope, cart);
         });
     }
     $scope.back = function() {
-        console.log('back');
+        Cart.back($scope.cart, function (cart) {
+            Presenter.update($scope, cart);
+        });
     }
     $scope.done = function() {
         console.log('done');

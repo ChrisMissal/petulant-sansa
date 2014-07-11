@@ -12,12 +12,24 @@
             return _cartProvider.GetOrCreate(id);
         }
 
-        public Cart Put(string id, object data)
+        [ActionName("next"), HttpPut]
+        public Cart Next(string id)
         {
             // if validation passes
             var cart = _cartProvider.Get(id);
 
             cart.State = cart.State.Next;
+
+            return cart;
+        }
+
+        [ActionName("back"), HttpPut]
+        public Cart Back(string id)
+        {
+            // if validation passes
+            var cart = _cartProvider.Get(id);
+
+            cart.State = cart.State.Previous;
 
             return cart;
         }

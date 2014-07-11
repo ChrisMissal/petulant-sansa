@@ -10,6 +10,10 @@ namespace TheApp
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
+                name: "WithActionApi",
+                routeTemplate: "api/{controller}/{id}/{action}");
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
