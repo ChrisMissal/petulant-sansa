@@ -6,6 +6,7 @@
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "Compu-Global-Hyper-Mega-Net";
             return View();
         }
     }

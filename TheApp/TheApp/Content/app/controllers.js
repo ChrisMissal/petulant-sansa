@@ -1,28 +1,28 @@
 ﻿
-angular.module('TheApp').controller('WizardCtrl', ['$scope', 'Presenter', 'Cart', function ($scope, Presenter, Cart) {
+angular.module('TheApp').controller('WizardCtrl', ['$scope', '$cookieStore', 'Presenter', 'Cart', function ($scope, $cookieStore, Presenter, Cart) {
 
-    var cartId = ($scope.cart && $scope.cart.id) || 'none';
+    var current = $cookieStore.get('cart');
 
-    Cart.get({ id: cartId }, function (cart) {
+    Cart.get(current || { id: 'none' }, function (cart) {
         Presenter.update($scope, cart);
     });
 
-    $scope.next = function() {
-        Cart.next($scope.cart, function (cart) {
+    $scope.next = function (cartId) {
+        Cart.next({ id: cartId }, function (cart) {
             Presenter.update($scope, cart);
         });
     }
-    $scope.back = function() {
-        Cart.back($scope.cart, function (cart) {
+    $scope.back = function (cartId) {
+        Cart.back({ id: cartId }, function (cart) {
             Presenter.update($scope, cart);
         });
     }
-    $scope.done = function() {
-        Cart.done($scope.cart, function (cart) {
+    $scope.done = function (cartId) {
+        Cart.done({ id: cartId }, function (cart) {
             Presenter.update($scope, cart);
         });
     }
-}]).controller('ReceiptCtrl', ['$scope', '$routeParams', function ($scope, $routeParams) {
-    console.log($routeParams);
+}]).controller('ReceiptCtrl', ['$scope', '$cookieStore', '$routeParams', function ($scope, $cookieStore, $routeParams) {
     $scope.cartId = $routeParams.id;
+    $cookieStore.remove('cart');
 }]);

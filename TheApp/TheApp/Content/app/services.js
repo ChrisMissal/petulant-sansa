@@ -1,6 +1,8 @@
 ﻿
-angular.module('TheApp').service('Presenter', ['$location', function($location) {
+angular.module('TheApp').service('Presenter', ['$location', '$cookieStore', function($location, $cookieStore) {
     this.update = function ($scope, data) {
+
+        $cookieStore.put('cart', { id: data.id });
 
         data.redirect && $location.path(data.redirect);
 
@@ -13,6 +15,6 @@ angular.module('TheApp').service('Presenter', ['$location', function($location) 
 
         $scope.progressStyle = { 'width': data.state.progress + '%' };
 
-        $scope.cart = data;
+        $scope.id = data.id;
     }
 }]);

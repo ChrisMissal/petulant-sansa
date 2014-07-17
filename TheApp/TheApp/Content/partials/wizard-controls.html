@@ -1,5 +1,7 @@
 <div id="controls" class="form-control-static">
-    <button class="btn btn-default" ng-click="back()" ng-disabled="disableBack">Back</button>
-    <button class="btn btn-default" ng-click="next()" ng-disabled="disableNext">Next</button>
-    <button class="btn btn-primary" ng-click="done()" ng-disabled="disableDone">Done</button>
+    <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-default" ng-click="back(id)" ng-disabled="disableBack">Back</a>
+        <a href="#" class="btn btn-default" ng-click="next(id)" ng-disabled="disableNext">Next</a>
+        <a href="#" class="btn btn-primary" ng-click="done(id)" ng-disabled="disableDone">Done</a>
+    </div>
 </div>

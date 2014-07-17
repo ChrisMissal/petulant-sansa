@@ -1,5 +1,5 @@
 ﻿
-angular.module('TheApp', ['ngRoute', 'ngResource', 'ui.bootstrap']).
+angular.module('TheApp', ['ngRoute', 'ngResource', 'ngCookies', 'ui.bootstrap']).
     config(['$routeProvider', function($routeProvider) {
             $routeProvider.
                 when('/', { templateUrl: '/content/partials/wizard.html', controller: 'WizardCtrl' }).

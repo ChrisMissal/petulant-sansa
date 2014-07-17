@@ -1,4 +1,8 @@
 ﻿
+#wizard #complete, #wizard #enter-address, #wizard #intro, #wizard #enter-name {
+    display: none;
+}
+
 #wizard.complete #intro {
     display: none;
 }
